@@ -20,7 +20,7 @@ I used [hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) to chang
 ```
 sudo -E hardcode-tray --size 24 --theme Papirus
 ```
-`hardcode-Tray` provides some means to change the colors via comand line. I couldn't to that. I don't know why, but `--color` option didn't work for me. In truth I didn't spend much time on that and just changed the color of SVG files with text editor. I have my Papirus icons located in `/usr/share/icons/Papirus/24x24`.
+`hardcode-Tray` provides some means to change the colors via command line. I couldn't to that. I don't know why, but `--color` option didn't work for me. In truth I didn't spend much time on that and just changed the color of SVG files with text editor. I have my Papirus icons located in `/usr/share/icons/Papirus/24x24`.
 
 #### Calendar 
 I used [gsimplecal](https://github.com/dmedvinsky/gsimplecal) to show nice calendar window when clicking on date.
@@ -31,7 +31,7 @@ I used [gsimplecal](https://github.com/dmedvinsky/gsimplecal) to show nice calen
 Hahaha, I just had some fun :D
 ![Workspaces](https://i.imgur.com/vtvfQpg.png)
 
-When it was time to decide how to display my workspaces it turned out I had a lot of fonts installed. Accidentialy I fount these cuties with [gucharmap](https://wiki.gnome.org/Apps/Gucharmap). It told me thats `NotoEmoji Nerd Font Mono` is responsible for coalas and octobuses. This font can be found here among ton of other [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
+When it was time to decide how to display my workspaces it turned out I had a lot of fonts installed. Accidentialy I fount these cuties with [gucharmap](https://wiki.gnome.org/Apps/Gucharmap). It told me that's `NotoEmoji Nerd Font Mono` is responsible for koalas and octopuses. This font can be found here among ton of other [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
 #### GTK Theme
 To adjust the colors of graphical applications I used [oomox](https://github.com/themix-project/oomox). I changed some colors of Numix theme.
