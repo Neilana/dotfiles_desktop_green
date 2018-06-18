@@ -4,7 +4,7 @@
 ![](https://i.imgur.com/OComdB2.jpg)
 
 ## Console Workflow
-Just some nerdy console stuff. In truth in truth don't use cmus much on my desktop. 
+Just some nerdy console stuff. In truth in truth don't use cmus much on my desktop. It
 ![](https://i.imgur.com/0gqYYCX.png)
 
 ## Graphical Workflow
@@ -35,3 +35,14 @@ When it was time to decide how to display my workspaces it turned out I had a lo
 To adjust the colors of graphical applications I used [oomox](https://github.com/themix-project/oomox). I changed some colors of Numix theme.
 For example, Thunar now looks like this.
 ![Thunar](https://i.imgur.com/ZVb9u8e.png)
+
+#### Clementine Music Control
+Welll, yeeeeah, maybe it's not the most complicated script ever but just a few lines of code buuut I oh goood how glad I was when this small script actually started to work and my songs started to switch and Clementine launched if it's closed! :D (I'm talking about something like `.config/polybar/myScripts/clementine.sh`
+If no music my polybar displays just that.
+
+![No Music](https://i.imgur.com/jmue1zJ.png)
+
+By clicking on it opens Clementine. If any song is being played then it changes to something like that with working buttons (haha, sorry, I know clickable buttons is not a big deal but I was really glad when these buttons worked).
+
+![Yeeeah Music](https://i.imgur.com/JhSjMBA.png)
+
