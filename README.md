@@ -9,9 +9,11 @@ Just some nerdy console stuff. In truth in truth don't use cmus much on my deskt
 
 ## Graphical Workflow
 And that looks more like my usual workflow. Switching between QtCreator, Telegram and Clementine-oh-god-what-a-song-give-me-some-lyrics.
-![](https://i.imgur.com/K6yc528.png)https://www.pexels.com/photo/green-leaves-1072179/
+![](https://i.imgur.com/K6yc528.png)
 
 ## Some Info
+Previously I used [i3](https://github.com/i3/i3) with [i3blocks](https://github.com/vivien/i3blocks). This is the first time I decided to take a look on [polybar](https://github.com/jaagr/polybar). So, if some polybar modules looks wierd maybe that's I just copy-pasted some from my i3blocks code :D
+
 #### Tray Icons
 I used [hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) to change the icons and their colors to match the main theme. I used [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icons.
 ![Tray Icons](https://i.imgur.com/HaJsNN5.png)
