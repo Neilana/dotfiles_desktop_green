@@ -1,0 +1,341 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+background = ${xrdb:*.background}
+background-alt = #8E9380
+foreground = ${xrdb:*.foreground}
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+
+
+[bar/my1]
+width = 100%
+height = 35
+
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #0A1213
+
+;padding-left = 0
+;padding-right = 2
+
+;module-margin-left = 1
+;module-margin-right = 2
+
+font-0 = Copse:pixelsize=15;0
+font-1 = FontAwesome:size=15;2
+font-2 = Junicode:size=22;-3
+font-3 = FuraMono Nerd Font Mono:pixelsize=26;2
+font-4 = NotoEmoji Nerd Font Mono:pixelsize=22;2
+font-5 = Noto Sans Symbols2:pixelsize=25;5
+
+;spacing = 0
+
+modules-left = i3
+modules-center = 
+;modules-right = arrow1 clementine clementineControl1 clementineControl2 clementineControl3 arrow2 volume arrow1 xkeyboard caps arrow2 date arrow1 menu0 arrow2
+modules-right = arrow1 clementine arrow2 volume arrow1 xkeyboard caps arrow2 date arrow1 menu0 arrow2
+
+tray-detached = false
+tray-position = right
+;tray-padding = 2
+tray-maxsize = 24 
+
+
+;tray-background = #586853
+tray-background = ${colors.background}
+
+;tray-transparent = true
+
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/arrow1]
+; background to trans
+type = custom/text
+content = " "
+content-font = 4
+
+content-foreground = #3C513E
+;content-background = ${colors.background}
+
+;content-padding = 0
+;border-size = 0
+
+[module/arrow2]
+; grey to bg
+type = custom/text
+content = " "
+content-font = 4
+content-foreground = ${colors.background}
+content-background = #3C513E
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+blacklist-1 = caps lock
+
+label-layout = %layout%
+
+;format-background = #394A3B
+format-background = #3C513E
+format-padding = 2
+
+
+[module/caps]
+type = custom/script
+exec = ~/.config/polybar/myScripts/capsindicator.sh
+label = %output% 
+format = <label>
+interval = 1
+click-left = xdotool key Caps_Lock
+;format-background = #3C513E
+format-background = #3C513E
+format-padding = 2
+
+[module/clementine]
+type = custom/script
+exec = ~/.config/polybar/myScripts/clementine_test.sh
+label = %output%
+format = <label>
+interval = 1
+
+format-background = #3C513E
+
+format-padding = 3
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+;ws-icon-0 = 1;ᚠ
+;ws-icon-1 = 2;ᚢ
+;ws-icon-2 = 3;ᚦ
+;ws-icon-3 = 4;ᚨ
+;ws-icon-4 = 5;ᚱ
+;ws-icon-5 = 6;ᚳ
+;ws-icon-6 = 7;ᚷ
+;ws-icon-7 = 8;ᚹ
+;ws-icon-8 = 9;ᛏ
+;ws-icon-9 = 10;ᛒ
+
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;
+;ws-icon-6 = 7;
+
+;ws-icon-default = 
+
+;🐨🌿🍀🐌🐣🐙🐢🐋🐸🐧🐬🐲🐀🐘🐝🐥
+ws-icon-0 = 1;🐨
+ws-icon-1 = 2;🐌
+ws-icon-2 = 3;🐙
+ws-icon-3 = 4;🐢
+ws-icon-4 = 5;🐥
+ws-icon-5 = 6;🐘
+ws-icon-6 = 7;🐝
+ws-icon-7 = 8;🐸
+ws-icon-8 = 9;🐧
+ws-icon-9 = 10;🐲
+
+;♈♉♊♋♌♍♎♏♐♑
+;ws-icon-0 = 1;♈
+;ws-icon-1 = 2;♉
+;ws-icon-2 = 3;♊
+;ws-icon-3 = 4;♋
+;ws-icon-4 = 5;♌
+;ws-icon-5 = 6;♍
+;ws-icon-6 = 7;♎
+;ws-icon-7 = 8;♏
+;ws-icon-8 = 9;♐
+;ws-icon-9 = 10;♑
+
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+; Default: %icon%  %name%
+;label-focused = %index% %icon%
+;label-focused="%{F#685A4D}%index% %{F-}%icon%"
+label-focused="%{B#223529 F#3C513E}%{B- F-}%{B#3C513E }%index% %icon%%{B-}%{B#223529 F#3C513E}%{B- F-}"
+;label-focused-background = #3C513E
+
+;label-focused-padding = 4
+
+
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = " %index% %icon% "
+label-unfocused-padding = 4
+label-unfocused-foreground = #8E9380
+
+
+; visible = Active workspace on unfocused monitor
+;label-visible = %index% %icon%
+;label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+;label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index% %icon%
+label-urgent-foreground = #2F150F
+label-urgent-background = #A48078
+label-urgent-padding = 4
+
+[module/date_old]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+;date = %a %b %d, 
+date = %{A:gsimplecal:} %%{F#bb}%A %d %b %Y%{F-}%{A} 
+
+; Optional time format
+time =  %%{F#ee}%H:%M%%{F-}
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt =  %Y
+time-alt = %H:%M:%S
+
+label = %date%  %time%
+;format =    <label>
+;format-background = #485947
+format-background = ${colors.background}
+format-padding = 3
+
+[module/date]
+type = custom/script
+exec = ~/.config/polybar/myScripts/date
+label = %output% 
+;format = <label>
+interval = 1
+;click-left = xdotool key Caps_Lock
+;format-background = ${colors.background}
+format-padding = 3
+
+[module/volume]
+type = internal/alsa
+
+format-padding = 3
+
+;format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+;label-volume-background = #314335
+label-volume-background = ${colors.background}
+
+format-muted-foreground = ${colors.foreground-alt}
+;format-muted = <label-muted> <bar-volume>
+format-muted = <label-muted> 
+label-muted = "        "
+
+master-soundcard = default
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = -
+bar-volume-fill-font = 2
+bar-volume-empty = -
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;format-margin = 0 
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
+
+
+[module/menu0]
+type = custom/menu
+;format-background = #50604D
+format-background = #3C513E
+
+format = <label-toggle> <menu>
+;format-underline = ${root.foreground}
+format-padding = 1
+
+;menu-0-0 =  sleep 
+menu-0-0 = 
+menu-0-0-exec = systemctl suspend
+
+;menu-0-1 =   restart 
+menu-0-1 =   
+menu-0-1-exec = shutdown -r now
+
+;menu-0-2 =  shutdown 
+menu-0-2 =  
+menu-0-2-exec = shutdown now
+
+menu-0-3 = "   "
+label-separator = "   "
+
+label-open ="  "
+label-close =
