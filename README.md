@@ -9,7 +9,7 @@ Just some nerdy console stuff. In truth in truth don't use cmus much on my deskt
 
 ## Graphical Workflow
 And that looks more like my usual workflow. Switching between QtCreator, Telegram and Clementine-oh-god-what-a-song-give-me-some-lyrics.
-![](https://i.imgur.com/K6yc528.png)
+![](https://i.imgur.com/K6yc528.png)https://www.pexels.com/photo/green-leaves-1072179/
 
 ## Some Info
 #### Tray Icons
@@ -46,3 +46,6 @@ By clicking on it opens Clementine. If any song is being played then it changes 
 
 ![Yeeeah Music](https://i.imgur.com/JhSjMBA.png)
 
+
+#### Wallpaper 
+Just a very green photo by [Cátia Matos](https://www.pexels.com/photo/green-leaves-1072179/).
